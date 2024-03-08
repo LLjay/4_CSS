@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글꼴관련스타일</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <!-- 브라우저에 접속해서 해당 링크로 찾아 들어가서 폰트를 받아 쓰는 것 -->
+    <!-- link는 자바스크립트에서도 많이 씀 -->
+    <style>
+        #ff1{
+            font-family: 궁서체;
+            font-size: 24px;
+        }
+        #ff2{font-family: 고딕체;}
+        #ff3{font-family:Arial, Helvetica, sans-serif;}
+
+        #ff4 {
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #fw1{font-weight: bold;}
+        #fw2{font-weight: 900;} /*bolder = 가장 굵은 값 900*/
+        /* 디폴트 값은 400, 가장 굵은 게 900 */
+        #fw3{font-weight: 100;} /*lighter = 가장 얇은 값 100*/
+        /* 가장 얇은 값 100 */
+        /* 폰트마다 기본적으로 굵기가 다르므로 다 다르게 나타남 */
+
+    </style>
+</head>
+<body>
+    <h1>글꼴 관련 스타일 속성</h1>
+
+    <h3>font-family : 글꼴을 지정할 때 사용</h3>
+    <pre>선택자{font-family:글꼴명;}</pre>
+
+    <p id="ff1">글꼴 테스트1</p>
+    <p id="ff2">글꼴 테스트2</p>
+    <p id="ff3">글꼴 테스트3</p>
+    <p>
+        <a href="https://fonts.google.com/" target="_blank">구글 웹 폰트 사이트</a>
+    </p>
+    
+    <p id="ff4">글꼴 테스트4</p>
+
+    <br>
+
+    <h3>font-size : 글꼴의 크기를 변경할 때 사용</h3>
+    <pre>선택자{font-size: 크기(px,ex(배수))}</pre>
+        <!-- em(배수), 폰트 사이즈 도 있으나 체계적이어야 하고 하나 틀어지면 수정하기 힘들어짐 -->
+
+    
+    <h3>font-weight : 글꼴의 굵기를 표현할 때 사용</h3>
+    <pre>
+        선택자{
+            font-weight:normal|bold|lighter| 100 | 900
+        }
+    </pre>
+
+    <ul>
+        <li>원래굵기</li>
+        <li id="fw1">굵은 글꼴로 변경</li>
+        <li id="fw2">원래 굵기보다 더 굵게</li>
+        <li id="fw3">원래 굵기보다 더 가늘게</li>
+    </ul>
+    <!-- 글꼴 기능은 사용하고 싶은 것을 구글링 해서 찾아볼 것 -->
+    <!-- 어떤 사이트에서 본 것 같은 것들은 무조건 됨 -->
+</body>
+</html>
