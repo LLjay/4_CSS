@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 스타일</title>
+    <style>
+        .size-test{border: 1px solid red;}
+        /* div인데 컨텐츠가 없으므로 height는 없는데 블럭 요소이므로 한 줄을 다 차지해서 width는 끝까지 들어가있음 */
+        #test1{width: 400px; height: 200px;} /* 블럭이니까 옆이 비었다고 해서 뭔가 들어올 수 있는 요소가 아님 */
+        #test2{width: 50%; height: 150px;}
+        /* 사진은 고정값, 화면을 맞춰서 늘어나면 비율이 깨짐
+            전체를 감싼 div에 배경색을 이미지의 배경색으로 주고 사진을 넣은 것 
+            div의 영역을 100%로 주고 사진의 크기를 px로 그대로 두고 양쪽 margin을 넣어주는 것*/
+        /* 버튼, 이미지 등 변하면 안 되는 것들은 px로, 화면에 따라 넓어지거나 작아지는 것(대체로 우리 눈에 안 보이는 여백들) 같은 것들은 %로 화면에 맞게 조정 */
+    
+        .red{background-color: red;}
+        .yellow{background-color: yellow;}
+        .pink{background-color: pink;}
+
+        .display-test{
+            border: 1px solid black;
+            width: 150px;
+            height: 150px;
+        }
+
+        .inline{display: inline;}
+        .inline-block{display: inline-block;}
+        .block{display: block;}
+    </style>
+</head>
+<body>
+    <!-- 레이아웃 : 화면에 어떻게 구성할 것인가
+        와이어프레임 : 영역을 나눈 프레임 -->
+    <!-- 
+        블럭 요소 : 한 줄로 영역을 차지하고 있는 요소 / 자동으로 줄바꿈 발생 (div, p, pre, h 등)
+        인라인 요소 : content 부분만 영역을 차지하고 있는 요소 / 옆으로 배치 (줄바꿈이 발생되지 않음) (span, label, input, img, 글자)
+        인라인이라는 것 자체가 필요한 영역만 사용하기 때문에 width나 height를 줘도 반영이 되지 않음
+        * 요소 영역 : => content 영역 + padding 영역 + border 영역
+          요소 바깥쪽 : => margin 영역
+    -->
+
+    <h1>레이아웃 관련 스타일</h1>
+    <h3>width, height</h3>
+    <p>기본적으로 내용을 차지하는 content 영역의 가로, 세로 길이를 조절하는데 사용하는 스타일 속성</p>
+
+    <h4>고정 크기(px)</h4>
+    <div id="test1" class="size-test"></div>
+
+    <h4>가변 크기(%)</h4>
+    <div id="test2" class="size-test"></div>
+
+    <hr>
+
+    <h3>display : 화면 배치 방법 변경</h3>
+    <pre>
+        선택자{
+            display: inline | block | inline-block
+        }
+        <!-- inline-block : content 영역만 차지하는 건 맞는데 inline이어도 width가 들어갈 수 있음 / 원래 인라인은 width height 추가가 안 됨 -->
+    </pre>
+
+    <h4>display : inline</h4>
+    <div class="display-test inline red">첫 번째</div>
+    <div class="display-test inline yellow">두 번째</div>
+    <div class="display-test inline pink">세 번째</div>
+
+    <h4>display : inline-block</h4>
+    <div class="display-test inline-block red">첫 번째</div>
+    <div class="display-test inline-block yellow">두 번째</div>
+    <div class="display-test inline-block pink">세 번째</div>
+
+    <h4>display : block</h4>
+    <div class="display-test block red">첫 번째</div>
+    <div class="display-test block yellow">두 번째</div>
+    <div class="display-test block pink">세 번째</div>
+</body>
+</html>
