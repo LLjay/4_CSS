@@ -8,8 +8,10 @@
         .container{
             border: 3px solid black;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
         }
+        /* flex-direction: column(수직) | row(수평) | column-reverse | row-reverse */
+        /* 자식 요소들을 정렬 시 추축을 어떤 방향으로 할 것인가? */
         /* 
             row : 행 안에서 정렬 하겠다
             column : 열 순으로 정렬 하겠다
@@ -21,6 +23,7 @@
             padding: 24px;
             text-align: center;
             border: 1px solid red;
+            width: 100px;
         }
         .item1{background-color: blanchedalmond;}
         .item2{background-color: olivedrab;}
@@ -78,8 +81,8 @@
     </p>
 
     <div class="container">
-        <div class="flex-item item1">1번</div>
-        <div class="flex-item item2">2번</div>
+        <div class="flex-item item1" style="flex: 1; max-width: 500px">1번</div>
+        <div class="flex-item item2" style="width: calc(100% - 200px)">2번</div>
         <div class="flex-item item3">3번</div>
 
     </div>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴바 만들기</title>
+    <style>
+        div{box-sizing: border-box;}
+        #navigator{width: 1000px; height: 40px; border: 1px solid black;}
+
+        ul, li, ol{
+            list-style-type: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        #navi{
+            height: 100%;
+        }
+
+        #navi>li{
+            float: left;
+            border: 1px solid white;
+            width: 100px;
+            height: 100%;
+            text-align: center;
+        }
+
+        #navi a{
+            font-size: 18px;
+            font-weight: 900;
+            width: 100%;
+            height: 100%; /* a 태그는 인라인이기 때문에 크기를 먹지 않음 */
+            display: block;
+            /* vertical-align: middle; 블럭일 때는 사용할 수 없음 */
+            line-height: 35px; /* 글자 크기로 가운데 정렬 */
+        }
+
+        #navi a:hover{
+            color: gray;
+            scale: 0.98;
+        }
+
+        #navi>li>ul{
+            display: none; /* 화면에서 다시 나타난 후에 선택해야 함, 아니면 나올 수도 있음 */
+        }
+
+        #navi>li>ul a{font-size: 15px;}
+
+        #navi>li>a:hover+ul{
+            display: block;
+        }
+        #navi>li>ul:hover{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navigator">
+        <ul id="navi">
+            <!-- (li>a)*5 -->
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Oracle</a></li>
+            <li>
+                <a href="#">Front-end</a>
+                <ul>
+                    <li><a href="">HTML</a></li>
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">JavaScript</a></li>
+                    <li><a href="">jQuery</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Server</a>
+                <ul>
+                    <li><a href="">JDBC</a></li>
+                    <li><a href="">Servlet</a></li>
+                    <li><a href="">JSP</a></li>
+                    <li><a href="">AJAX</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Framework</a></li>
+        </ul>
+    </div>
+</body>
+</html>

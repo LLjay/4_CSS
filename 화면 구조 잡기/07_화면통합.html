@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            border: 1px solid papayawhip;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div, ul, li, a{
+            text-decoration: none;
+        }
+
+        div, input{
+            margin: 0px;
+        }
+
+        div>a{
+            color: black;
+        }
+
+        .menu{
+            display: flex;;
+        }
+
+        ul, li, ol{
+            list-style-type: none;
+        }
+
+        ul>li>a{
+            color: orange;
+        }
+
+        .search{
+            width: 100%;
+            height: 100px;
+            position: relative;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+
+        .search-form{
+            margin: auto;
+            width: 50%;
+            min-width: 300px;
+            height:30px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .search-form>input{
+            float: left;
+            height: 100%;
+        }
+
+        .search-keyword{
+            width: 80%;
+            height: 100%;
+        }
+
+        .search-submit{
+            width: 25%;
+            max-width: 100px;
+            height: 100%;
+        }
+
+        .menu{
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 검색창 -->
+    <div class="search">
+        <form action=""  class="search-form">
+            <input type="text" class="search-keyword" name="search-keyword">
+            <input type="submit" class="search-submit" value="검색">
+        </form>
+        <!-- form 자체가 하나의 영역으로 인식 -->
+    </div>
+
+    <!-- 메뉴바 -->
+    <div class="menu">
+        <ul>
+            <li><a href="">Java</a></li>
+            <li><a href="">Oracle</a></li>
+            <li>
+                <a href="">Front-end</a>
+                <ul>
+                    <li><a href="">HTML</a></li>
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">JavaScript</a></li>
+                    <li><a href="">jQuery</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Server</a>
+                <ul>
+                    <li><a href="">JDBC</a></li>
+                    <li><a href="">Servlet</a></li>
+                    <li><a href="">JSP</a></li>
+                    <li><a href="">AJAX</a></li>
+                </ul>
+            </li>
+            <li><a href="">Framework</a></li>
+        </ul>
+    </div>
+
+    <!-- 로그인 -->
+    <div class="login">
+        <form action="">
+            <!-- 아이디 비번 제출란 -->
+            <div>
+                <!-- 아이디 비번 입력 -->
+                <div>
+                    <input type="text" name="userId" placeholder="아이디를 입력해주세요">
+                    <input type="password" name="userPwd" placeholder="비밀번호를 입력해주세요">
+                </div>
+                <!-- 로그인 제출 -->
+                <div>
+                    <input type="submit" value="로그인">
+                </div>
+            </div>
+        </form>
+        <!-- 회원가입 기능란 -->
+        <div>
+            <a href="">회원가입</a>
+            <a href="">ID/PWD 찾기</a>
+        </div>
+    </div>
+
+    <!-- 빈 공간(content) -->
+    <div class="content">
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <!-- 이용약관 메뉴 -->
+        <div>
+            <a href="">이용약관</a>
+            <a href="">개인정보취급방침</a>
+            <a href="">인재채용</a>
+            <a href="">고객센터</a>
+        </div>
+
+        <!-- 주소 -->
+        <div>
+            강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F <br>
+            강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+            강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F <br>
+            종로지원 : 서울특별시 중구 남대문로 120 그레이츠 청계(구 대일빌딩) 2F, 3F <br>
+            당산지원 : 서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F, 20F <br>
+        </div>
+
+        <!-- copyright -->
+        <div>
+            Copyright © 1998-2024 KH Information Educational Institute All Right Reserved
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+        }
+        .test{
+            border: 1px solid black; 
+            width: 1000px;
+            height: 300px;
+            padding: 5%; /*body가 부모니까 화면 기준으로 줄어들고 늘어나는 것*/
+            margin: 5%;
+        }
+
+        .test2{
+            border: 1px solid slateblue;
+            width: 20%;
+            height: 60%; /* 이 요소가 속한 영역 내에서의 % */
+            /* display: inline; -> 1번 2번의 display가 inline으로 변경되어 content 위주 영역이 됨 */
+            /* display: block; -> 기존의 div 방식대로 width 한 줄을 다 차지하면서 개행함 */
+            display: inline-block; /* inline 요소처럼 기본적으로 content 기준 영역이지만, width를 지정할 수 있음 */
+            /* display 지정은 그 영역 자체의 화면 배치 방법을 변경하는 것이다. */
+            text-align: center;
+        } 
+        
+        .test3{
+            border: 1px solid salmon;
+            width: 20%;
+            height: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .test4{
+            border: 1px solid rgb(255, 236, 61);
+        }
+
+        .test5{
+            border: 1px solid burlywood;
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+        .test6{
+            border: 1px solid seagreen;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test">
+        <h2>display : inline-block</h2>
+        <div class="test2">1번</div>
+        <div class="test2">2번</div>
+    </div>
+    <div class="test">
+        <h2>display : flex</h2>
+        <div class="test3">
+            <div class="test4">1번</div>
+            <div class="test4">2번</div>
+        </div>
+        <div class="test3">2번</div>
+    </div>
+    <div class="test">
+        <h2>position</h2>
+        <div class="test5">
+            <div class="test6">
+                margin은 어떤 공간 사이의 중심까지의 여백을 auto로 재주는 것인데 <br>
+                absolute는 첫 기준이 왼쪽 위 꼭짓점이므로 margin을 잴 수 있는 간격 자체가 없음 <br>
+                따라서 absolute의 top left bottom right로 간격을 정해준 다음 margin으로 그 사이의 간격을 재 여백을 넣어 센터를 맞춰주는 것
+            </div>
+        </div>
+        <div style="margin: auto; border: 1px solid black; height: 100px; width: 100px;">안녕하세요.</div>
+    </div>
+
+
+    <!-- display : 화면 배치 방법을 변경하는 것 -->
+</body>
+</html>
