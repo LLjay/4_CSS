@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세부 검색창 만들기</title>
+    <style>
+        div, form, input{
+            box-sizing: border-box; 
+            border: 1px solid red;
+        }
+        #header_2{
+            width: 600px;
+            height: 150px;
+            position: relative;
+        }
+
+        #search_form{
+            /* margin: auto; width 백이니까 줄래도 줄 수가 없음 */
+            margin: auto;
+            width: 80%;
+            height: 20%;
+            position: absolute;
+            /* 부모에 relative를 해주지 않으면 전체 창의 절대값으로 인식 */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* 네 개 다 극단으로 가려고 해서 결국 가운데에 배치됨 */
+            /* 다 0으로 주면 전체에 다 붙으려고 하기 때문에 중앙 정렬 됨, 일반적이진 않음 */
+        }
+
+        #search_form>input{
+            height: 100%;
+            float: left;
+        }
+        #search_form>input:nth-child(1){
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header_2">
+        <form action="" id="search_form">
+            <input type="text" name="keyword">
+            <input type="submit" value="검색">
+        </form>
+    </div>
+</body>
+</html>

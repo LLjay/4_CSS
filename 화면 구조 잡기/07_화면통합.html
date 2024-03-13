@@ -44,6 +44,9 @@
             justify-content: center;
             align-items: center; */
         }
+        .search-margin{
+            width: 25%;
+        }
 
         .search-form{
             margin: auto;
@@ -68,12 +71,13 @@
         }
 
         .search-submit{
-            width: 25%;
-            max-width: 100px;
+            width: 20%;
             height: 100%;
         }
 
         .menu{
+            
+            text-align: center;
             display: flex;
             justify-content: space-between;
         }
@@ -84,11 +88,13 @@
 <body>
     <!-- 검색창 -->
     <div class="search">
+        <div class="search-margin"></div>
         <form action=""  class="search-form">
             <input type="text" class="search-keyword" name="search-keyword">
             <input type="submit" class="search-submit" value="검색">
         </form>
         <!-- form 자체가 하나의 영역으로 인식 -->
+        <div class="search-margin"></div>
     </div>
 
     <!-- 메뉴바 -->
