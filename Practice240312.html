@@ -59,6 +59,106 @@
             bottom: 0px;
             right: 0px;
         }
+
+        .wrap21{
+            border: 1px solid black;
+            width: 500px;
+            height: 100px;
+            display: flex;
+        }
+        .test21{
+            border: 1px solid blue;
+            flex: 1;
+        }
+
+        .test22{
+            border: 1px solid red;
+            flex: 1;
+        } /* flex로 비율을 맞춰주는 건 전체 지정한 영역을 꽉 채우는 방식*/
+    
+        .wrap22{
+            border: 1px solid black;
+            width: 500px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .test23{
+            border: 1px solid blue;
+            width: 80%;
+        }
+
+        .test24{
+            border: 1px solid red;
+            list-style: none;
+        }
+
+        .wrap23{
+            border: 1px solid black;
+            width: 80%;
+            height: 100px;
+        }
+
+        .test25{
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            height: 50%;
+            font-size: 20px;
+        }
+        .test26{
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            height: 50%;
+            font-size: 20px;
+        }
+
+        .wrap24{
+            border: 0px;
+            width: 500px;
+            height: 100px;
+            display: flex;
+        }
+
+        .test27{
+            width: 20%;
+        }
+
+        /* .nav{
+            border: 1px solid gray;
+            width: 500px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .nav>ul{
+            border: 1px solid black;
+        } */
+        /* nav의 자손 ul은 하나니까 당연히 하나로 묶이지...
+           ul 컨텐츠 안의 또다른 ul이 1-1, 1-2인 거고
+           nav 자손의 ul 안에는 1번 li 2번 li가 있기 때문에 묶이는 것 */
+
+        .nav *{
+            list-style: none;
+            text-decoration: none;
+            color: black;
+        }
+        .nav{
+            border: 1px solid gray;
+            width: 500px;
+        }
+        .nav>ul{
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav{
+
+        }
+
     </style>
 </head>
 <body>
@@ -87,7 +187,61 @@
         <div style="margin: auto; border: 1px solid black; height: 100px; width: 100px;">안녕하세요.</div>
     </div>
 
+    <div style="border: 1px solid black;">
+
+        <form style="border: 1px solid salmon" action="">
+            div처럼 되네...
+            부모 것을 상속하는 것처럼 속성을 물려받나? <br>
+            랄라
+        </form>
+    </div>
 
     <!-- display : 화면 배치 방법을 변경하는 것 -->
+
+    <div class="wrap21">
+        <div class="test21"></div>
+        <div class="test22"></div>
+    </div>
+
+    <div class="wrap22">
+        <div class="test23"></div>
+        <ul class="test24">
+            <li>1번</li>
+            <li>2번</li>
+            <li>3번</li>
+        </ul>
+    </div>
+
+    <form class="wrap24" action="">
+        <div class="wrap23">
+            <input class="test25" type="text" placeholder="아이디 입력">
+            <input class="test26" type="text" placeholder="비밀번호 입력">
+        </div>
+        <input class="test27" type="submit">
+    </form>
+
+    <div class="nav">
+        <ul class="first-nav">
+            <li>
+                <a href="">
+                    1번
+                    <ul class="second-nav">
+                        <li>1-1</li>
+                        <li>1-2</li>
+                    </ul>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    2번
+                    <ul>
+                        <li>2-1</li>
+                        <li>2-2</li>
+                    </ul>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <br><br>
 </body>
 </html>

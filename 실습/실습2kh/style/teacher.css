@@ -1,0 +1,47 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.gray-border{
+    /* 공통적으로 회색 border 쓰는 것들을 위한 클래스 */
+    border: 2px solid lightgray;
+}
+
+#wrapper{
+    width: 1000px;
+    /* 일정 이상 넘어가지 않게 하도록 전체를 제어해주고 감싸주는 클래스 */
+    /* 해당 넓이를 제거하고 미디어 쿼리를 이용해서 제어하면 반응형 */
+    margin: 0 auto;
+}
+
+/* 더 줄어들면 margin이 0이 됐을 때 div에 딱 붙어버림, padding을 넣어주면 내부에서 띄워주기 때문에 끝에 완전히 붙지 않게 될 수 있음 */
+
+/* margin으로 간격 맞추기 / justify로 center 한 다음 kh를 absolute로 바꾸기 / div를 안 보이는 걸로 하나 더 넣어주기 */
+
+#nav{
+    width: 100%;
+    padding: 25px 10px;
+}
+
+#nav ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+}
+/* 앞으로 변할 정보인지 아닌지에 따라 flex로 하던가 각자 차지하는 공간 값을 직접 주던가 */
+#nav li{
+    width: 20%;
+    list-style: none;
+}
+
+#nav li a{
+    tex
+}
+
+
+/* ul로 넣어주면 부모에서 flex 적용했을 때 ul 자체를 하나의 데이터로 인식하나? */
+
+/* float를 사용하면 그 다음 줄의 컨텐츠가 밀려 들어갈 수 있으므로 clear 해줘야 깔끔하게 정렬 가능 */

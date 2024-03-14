@@ -5,19 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
+        .wrap1{
+            border: 1px solid black;
+            width: 500px;
+            height: 100px;
+            display: flex;
+        }
+        .test1{
+            border: 1px solid blue;
+            flex: 1;
+        }
 
+        .test2{
+            border: 1px solid red;
+            flex: 1;
+        } /* flex로 비율을 맞춰주는 건 전체 지정한 영역을 꽉 채우는 방식*/
+    
+        .wrap2{
+            border: 1px solid black;
+            width: 500px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .test3{
+            border: 1px solid blue;
+            width: 80%;
+        }
+
+        .test4{
+            border: 1px solid red;
+            list-style: none;
+        }
+
+
+        
+    /* 부모 container 안의 flex는 무조건 자손 컨텐츠들에게 적용된다 => ul이 있을 경우 li 속성의 후손들은 적용되지 않는다. */
+    /* justify-content로 between 등의 속성을 부여할 경우, width를 100%로 넣어주면 다른 자손이 공간을 차지한 나머지 공간에서의 100%로 적용된다. */
     </style>
 </head>
 <body>
     <!-- header -->
-    <div>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="wrap1">
+        <div class="test1"></div>
+        <div class="test2"></div>
     </div>
 
-    <div>
-        
+    <div class="wrap2">
+        <div class="test3"></div>
+        <ul class="test4">
+            <li>1번</li>
+            <li>2번</li>
+            <li>3번</li>
+        </ul>
     </div>
 
 </body>

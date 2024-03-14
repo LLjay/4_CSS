@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.gray-border{
+    border: 2px solid lightgray;
+}
+
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+
+#content{
+    margin: 10px 200px;
+}
