@@ -1,0 +1,76 @@
+#mainUp *{
+    /* border: 1px solid salmon; */
+}
+
+#mainUp{
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+}
+
+#banner{
+    width: calc(70% - 10px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* float: left; */
+}
+
+#banner>img{
+    width: 100%;
+    max-width: 780px;
+    max-height: 115px;
+}
+
+#login-box{
+    width: 30%;
+    /* float: right; */
+    /* float는 그냥 각자의 속성을 그대로 가진 채로 정렬만 해주네 flex는 height까지 맞춰주고 */
+    height: 100%;
+
+}
+
+#login-form{
+    height: 80%;
+}
+
+#login-form>div{
+    width: 70%;
+    height: 100%;
+    display: inline-block;
+}
+
+#login-form>div>input{
+    width: 100%;
+    height: 50%;
+    padding-left: 7px;
+}
+
+#login-form>button{
+    width: 30%;
+    height: 100%;
+    float: right;
+}
+
+#login-info{
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    height: 20%;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#shopping{
+    width: 30%;
+    height: 350px;
+    float: right;
+}
+
+#shopping>img{
+    width: 100%;
+}
